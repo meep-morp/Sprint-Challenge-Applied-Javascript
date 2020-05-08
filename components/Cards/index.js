@@ -66,26 +66,23 @@ const getCardInfo = () => {
         topicsArr.forEach((topic) => {
             topicObjects.push(articlesData[topic]);
         })
-        console.log(topicObjects);
+        // console.log(topicObjects);
 
-// I know this way sucks but I cannot get it to go past JavaScript topic.. 
+        Object.size = function(obj) {
+            var size = 0, key;
+            for (key in obj) {
+                if (obj.hasOwnProperty(key)) size++;
+            }
+            return size;
+        };    
 
-        for(let i = 0; i < 5; i++) {
-
-            let cardMakerNode = cardMaker(topicObjects[0][i]);
-            let cardMakerOne = cardMaker(topicObjects[1][i]);
-            let cardMakertwo = cardMaker(topicObjects[2][i]);
-            let cardMakerthree = cardMaker(topicObjects[3][i]);
-            let cardMakerFour = cardMaker(topicObjects[4][i]);
-
-            document.querySelector(".cards-container").appendChild(cardMakerOne);
-            document.querySelector(".cards-container").appendChild(cardMakertwo);
-            document.querySelector(".cards-container").appendChild(cardMakerthree);
-            document.querySelector(".cards-container").appendChild(cardMakerFour);
-            document.querySelector(".cards-container").appendChild(cardMakerNode);
-
-        }
-
+        topicObjects.forEach((topic) => {
+            // console.log(topic);
+            for(let i = 0; i < topic.length; i++ ){
+                const cardMakerNew = cardMaker(topic[i]);
+                document.querySelector(".cards-container").appendChild(cardMakerNew);
+            }
+        })
     })
     .catch(error => {
         console.log(error);

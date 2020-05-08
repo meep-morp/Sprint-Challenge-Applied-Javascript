@@ -29,14 +29,20 @@ Demonstrate your understanding of this week's concepts by answering the followin
 Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your team lead.
 
 1. What is the DOM?
+    The DOM is the document object model that the browser contructs from HTML.
+
 
 2. What is an event?
+    An event is something that happens to the webpage such as loading, a click, a keypress, ect.
 
 3. What is an event listener?
+    The browser listens  for an event and executes a function
 
 4. Why would we convert a NodeList into an Array?
+    A nodelist can only use forEach and not any other higher-order functions.
 
 5. What is a component?
+    Reusable code.
 
 ### Git Set up
 
